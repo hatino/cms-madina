@@ -22,7 +22,7 @@ class Mdl_berita extends ci_model
             select  berita_id, judul_berita, deskripsi_berita, img_path_2, img_path_3, img_path , register_date           
             from    berita                      
             order by register_date desc
-            limit 10
+            limit 8
             ";                     
             return $this->db->query($query);
     

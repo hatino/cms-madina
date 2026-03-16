@@ -402,11 +402,13 @@
                   var sejarah = data[0].sejarah
                   var len_sejarah = sejarah.length;
                   var isi_sejarah;                 
-                  if(len_sejarah > 200){
-                      isi_sejarah = sejarah.substr(0,245)+ "..."
+                  if(len_sejarah > 600){
+                      //isi_sejarah = sejarah.substr(0,600)+ "..."
+                      isi_sejarah = truncateHTML(sejarah, 600);
                   }else{
                       isi_sejarah = sejarah
                   }       
+                  
                   html +='      <div class="col-12 col-md-6 d-flex flex-column align-items-center">';
                   html +='            <h3 class="text-header" align="left" style="cursor: pointer;"><strong><u>Sejarah Yayasan</u></strong></h3>';   
                   html +='            <div class="card-text ps-3 pe-3" style="margin-bottom:3px; text-align:right"><a style="cursor: pointer;">'+isi_sejarah+'</a></div>';  
@@ -472,10 +474,13 @@
                     var len_berita = berita.length;
                     var isi_berita;
                     if(len_berita > 200){
-                        isi_berita = berita.substr(0,100)+"..."
+                        //isi_berita = berita.substr(0,200)+"..."
+                        //isi_berita = berita.replace(/<[^>]*>?/gm, '').substring(0,200) + "...";
+                        isi_berita = truncateHTML(berita, 200);
                     }else{
                         isi_berita = berita
-                    }                    
+                    }   
+                        
                     html +='            <p class="card-text" style="margin-bottom:3px; text-align:left"><a style="cursor: pointer;">'+isi_berita+'</a></p>';   
 
                     html +='        </div>';
@@ -493,6 +498,45 @@
 
           }
       });          
+  }
+
+  function truncateHTML(html, limit) {
+      let div = document.createElement("div");
+      div.innerHTML = html;
+
+      let count = 0;
+
+      function walk(node) {
+          if (node.nodeType === 3) { 
+              let text = node.nodeValue;
+
+              if (count + text.length > limit) {
+                  node.nodeValue = text.substring(0, limit - count) + "...";
+                  return true;
+              }
+
+              count += text.length;
+          }
+
+          if (node.nodeType === 1) {
+              let children = [...node.childNodes];
+
+              for (let child of children) {
+                  if (walk(child)) {
+                      for (let sib of children.slice(children.indexOf(child)+1)) {
+                          sib.remove();
+                      }
+                      return true;
+                  }
+              }
+          }
+
+          return false;
+      }
+
+      walk(div);
+
+      return div.innerHTML;
   }
 
   function changeMainImg(e, id, src) {      
