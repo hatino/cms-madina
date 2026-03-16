@@ -1,0 +1,122 @@
+[
+    {
+        "kelas_cls": "V",
+        "semester": "1",
+        "bobot_pg": "1",
+        "bobot_uraian": "3",
+        "jml_soal_pg": "30",
+        "jml_soal_uraian": "5",
+        "register_user": "guru",
+        "register_date": "2025-08-22 09:02:10",
+        "last_user": "M. Zulkarnain",
+        "last_update": "2025-09-02 13:48:57"
+    },
+    {
+        "kelas_cls": "VI",
+        "semester": "1",
+        "bobot_pg": "1",
+        "bobot_uraian": "3",
+        "jml_soal_pg": "30",
+        "jml_soal_uraian": "5",
+        "register_user": "guru",
+        "register_date": "2025-08-22 09:02:54",
+        "last_user": "ais",
+        "last_update": "2025-09-01 06:08:41"
+    },
+    {
+        "kelas_cls": "V",
+        "semester": "2",
+        "bobot_pg": "1",
+        "bobot_uraian": "3",
+        "jml_soal_pg": "35",
+        "jml_soal_uraian": "5",
+        "register_user": "guru",
+        "register_date": "2025-08-22 09:03:31",
+        "last_user": "guru",
+        "last_update": "2025-08-22 09:03:31"
+    },
+    {
+        "kelas_cls": "VI",
+        "semester": "2",
+        "bobot_pg": "1",
+        "bobot_uraian": "3",
+        "jml_soal_pg": "35",
+        "jml_soal_uraian": "5",
+        "register_user": "guru",
+        "register_date": "2025-08-22 09:04:26",
+        "last_user": "guru",
+        "last_update": "2025-08-22 09:04:26"
+    },
+    {
+        "kelas_cls": "VII",
+        "semester": "1",
+        "bobot_pg": "1",
+        "bobot_uraian": "3",
+        "jml_soal_pg": "45",
+        "jml_soal_uraian": "5",
+        "register_user": "guru",
+        "register_date": "2025-08-22 09:05:05",
+        "last_user": "guru",
+        "last_update": "2025-08-25 14:34:05"
+    },
+    {
+        "kelas_cls": "VIII",
+        "semester": "1",
+        "bobot_pg": "1",
+        "bobot_uraian": "3",
+        "jml_soal_pg": "45",
+        "jml_soal_uraian": "5",
+        "register_user": "guru",
+        "register_date": "2025-08-22 09:05:31",
+        "last_user": "guru",
+        "last_update": "2025-08-22 09:05:31"
+    },
+    {
+        "kelas_cls": "IX",
+        "semester": "1",
+        "bobot_pg": "1",
+        "bobot_uraian": "3",
+        "jml_soal_pg": "45",
+        "jml_soal_uraian": "5",
+        "register_user": "guru",
+        "register_date": "2025-08-22 09:05:53",
+        "last_user": "guru",
+        "last_update": "2025-08-22 09:05:53"
+    },
+    {
+        "kelas_cls": "VII",
+        "semester": "2",
+        "bobot_pg": "1",
+        "bobot_uraian": "3",
+        "jml_soal_pg": "50",
+        "jml_soal_uraian": "5",
+        "register_user": "guru",
+        "register_date": "2025-08-22 09:06:08",
+        "last_user": "guru",
+        "last_update": "2025-08-22 09:06:11"
+    },
+    {
+        "kelas_cls": "VIII",
+        "semester": "2",
+        "bobot_pg": "1",
+        "bobot_uraian": "3",
+        "jml_soal_pg": "50",
+        "jml_soal_uraian": "5",
+        "register_user": "guru",
+        "register_date": "2025-08-22 09:06:24",
+        "last_user": "guru",
+        "last_update": "2025-08-22 09:06:24"
+    },
+    {
+        "kelas_cls": "IX",
+        "semester": "2",
+        "bobot_pg": "1",
+        "bobot_uraian": "3",
+        "jml_soal_pg": "50",
+        "jml_soal_uraian": "5",
+        "register_user": "guru",
+        "register_date": "2025-08-22 09:06:37",
+        "last_user": "guru",
+        "last_update": "2025-08-22 09:06:37"
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "bank_soal_id": "80",
+        "soal_id": "200",
+        "nis": "252607007",
+        "jawaban": "produksi ",
+        "kata_kunci_1": "Produksi",
+        "kata_kunci_2": "produksi",
+        "nilai": "3.00",
+        "register_user": "252607007",
+        "register_date": "2025-10-09 12:55:27",
+        "update_user": "252607007",
+        "update_date": "2025-10-09 12:55:27",
+        "bobot_nilai": "3",
+        "jml_soal": "5"
+    },
+    {
+        "bank_soal_id": "80",
+        "soal_id": "201",
+        "nis": "252607007",
+        "jawaban": "agama",
+        "kata_kunci_1": "Akulturasi",
+        "kata_kunci_2": "akulturasi",
+        "nilai": "0.00",
+        "register_user": "252607007",
+        "register_date": "2025-10-09 12:55:49",
+        "update_user": "252607007",
+        "update_date": "2025-10-09 12:55:49",
+        "bobot_nilai": "3",
+        "jml_soal": "5"
+    }
+]

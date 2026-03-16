@@ -1,0 +1,17 @@
+[
+    {
+        "bank_soal_id": "36",
+        "soal_id": "194",
+        "nis": "252607001",
+        "jawaban": "suara",
+        "kata_kunci_1": "Olah suara",
+        "kata_kunci_2": "olah suara ",
+        "nilai": "3",
+        "register_user": "252607001",
+        "register_date": "2025-10-13 14:16:34",
+        "update_user": "252607001",
+        "update_date": "2025-10-13 14:16:34",
+        "bobot_nilai": "3",
+        "jml_soal": 5
+    }
+]

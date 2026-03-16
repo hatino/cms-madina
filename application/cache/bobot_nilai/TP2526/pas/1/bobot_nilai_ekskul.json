@@ -1,0 +1,28 @@
+[
+    {
+        "id": "3",
+        "kelas_cls": "V",
+        "semester": "1",
+        "bobot_pg": "2",
+        "bobot_uraian": "2",
+        "jml_soal_pg": "25",
+        "jml_soal_uraian": "5",
+        "register_user": "admin",
+        "register_date": "2025-11-27 08:54:04",
+        "last_user": "admin",
+        "last_update": "2025-11-28 09:19:16"
+    },
+    {
+        "id": "4",
+        "kelas_cls": "VI",
+        "semester": "1",
+        "bobot_pg": "1",
+        "bobot_uraian": "3",
+        "jml_soal_pg": "25",
+        "jml_soal_uraian": "5",
+        "register_user": "admin",
+        "register_date": "2025-11-27 08:59:25",
+        "last_user": "admin",
+        "last_update": "2025-11-27 08:59:25"
+    }
+]

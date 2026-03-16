@@ -1,0 +1,17 @@
+[
+    {
+        "bank_soal_id": "122",
+        "soal_id": "377",
+        "nis": "212201001",
+        "jawaban": "a",
+        "kata_kunci_1": "a",
+        "kata_kunci_2": "b",
+        "nilai": 0,
+        "register_user": "212201001",
+        "register_date": "2025-11-29 06:00:40",
+        "update_user": "212201001",
+        "update_date": "2025-11-29 06:00:40",
+        "bobot_nilai": "2",
+        "jml_soal": 1
+    }
+]

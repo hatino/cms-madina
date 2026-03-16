@@ -1,0 +1,44 @@
+[
+    {
+        "bank_soal_id": "36",
+        "soal_id": "200",
+        "nis": "252607001",
+        "jawaban": "d",
+        "kunci_jawaban": "d",
+        "nilai": "1",
+        "register_user": "252607001",
+        "register_date": "2025-10-13 14:15:44",
+        "update_user": "252607001",
+        "update_date": "2025-10-13 14:15:44",
+        "jml_soal": 45,
+        "bobot_nilai": "1"
+    },
+    {
+        "bank_soal_id": "36",
+        "soal_id": "206",
+        "nis": "252607001",
+        "jawaban": "a",
+        "kunci_jawaban": "a",
+        "nilai": "1",
+        "register_user": "252607001",
+        "register_date": "2025-10-13 14:16:02",
+        "update_user": "252607001",
+        "update_date": "2025-10-13 14:16:02",
+        "jml_soal": 45,
+        "bobot_nilai": "1"
+    },
+    {
+        "bank_soal_id": "36",
+        "soal_id": "212",
+        "nis": "252607001",
+        "jawaban": "c",
+        "kunci_jawaban": "c",
+        "nilai": "1",
+        "register_user": "252607001",
+        "register_date": "2025-10-13 14:16:16",
+        "update_user": "252607001",
+        "update_date": "2025-10-13 14:16:16",
+        "jml_soal": 45,
+        "bobot_nilai": "1"
+    }
+]

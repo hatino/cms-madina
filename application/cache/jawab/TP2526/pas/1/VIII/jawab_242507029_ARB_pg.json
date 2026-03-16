@@ -1,0 +1,72 @@
+[
+    {
+        "bank_soal_id": "151",
+        "soal_id": "4037",
+        "nis": "242507029",
+        "jawaban": "b",
+        "kunci_jawaban": "b",
+        "nilai": "1",
+        "register_user": "242507029",
+        "register_date": "2025-12-05 17:23:16",
+        "update_user": "242507029",
+        "update_date": "2025-12-05 17:23:16",
+        "jml_soal": 50,
+        "bobot_nilai": "1"
+    },
+    {
+        "bank_soal_id": "151",
+        "soal_id": "4038",
+        "nis": "242507029",
+        "jawaban": "b",
+        "kunci_jawaban": "b",
+        "nilai": "1",
+        "register_user": "242507029",
+        "register_date": "2025-12-05 17:23:50",
+        "update_user": "242507029",
+        "update_date": "2025-12-05 17:23:50",
+        "jml_soal": 50,
+        "bobot_nilai": "1"
+    },
+    {
+        "bank_soal_id": "151",
+        "soal_id": "4039",
+        "nis": "242507029",
+        "jawaban": "b",
+        "kunci_jawaban": "b",
+        "nilai": "1",
+        "register_user": "242507029",
+        "register_date": "2025-12-05 17:24:45",
+        "update_user": "242507029",
+        "update_date": "2025-12-05 17:24:45",
+        "jml_soal": 50,
+        "bobot_nilai": "1"
+    },
+    {
+        "bank_soal_id": "151",
+        "soal_id": "4040",
+        "nis": "242507029",
+        "jawaban": "b",
+        "kunci_jawaban": "b",
+        "nilai": "1",
+        "register_user": "242507029",
+        "register_date": "2025-12-05 17:25:31",
+        "update_user": "242507029",
+        "update_date": "2025-12-05 17:25:31",
+        "jml_soal": 50,
+        "bobot_nilai": "1"
+    },
+    {
+        "bank_soal_id": "151",
+        "soal_id": "4086",
+        "nis": "242507029",
+        "jawaban": "c",
+        "kunci_jawaban": "b",
+        "nilai": 0,
+        "register_user": "242507029",
+        "register_date": "2025-12-05 17:27:37",
+        "update_user": "242507029",
+        "update_date": "2025-12-05 17:27:37",
+        "jml_soal": 50,
+        "bobot_nilai": "1"
+    }
+]

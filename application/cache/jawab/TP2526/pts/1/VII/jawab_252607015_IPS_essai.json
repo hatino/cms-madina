@@ -1,0 +1,62 @@
+[
+    {
+        "bank_soal_id": "80",
+        "soal_id": "200",
+        "nis": "252607015",
+        "jawaban": "Produksi",
+        "kata_kunci_1": "Produksi",
+        "kata_kunci_2": "produksi",
+        "nilai": "3",
+        "register_user": "252607015",
+        "register_date": "2025-10-09 12:51:46",
+        "update_user": "252607015",
+        "update_date": "2025-10-09 12:51:51",
+        "bobot_nilai": "3",
+        "jml_soal": "5"
+    },
+    {
+        "bank_soal_id": "80",
+        "soal_id": "201",
+        "nis": "252607015",
+        "jawaban": "Beribadah di tempat ibadah",
+        "kata_kunci_1": "Akulturasi",
+        "kata_kunci_2": "akulturasi",
+        "nilai": 0,
+        "register_user": "252607015",
+        "register_date": "2025-10-09 12:52:11",
+        "update_user": "252607015",
+        "update_date": "2025-10-09 12:52:31",
+        "bobot_nilai": "3",
+        "jml_soal": "5"
+    },
+    {
+        "bank_soal_id": "80",
+        "soal_id": "308",
+        "nis": "252607015",
+        "jawaban": "Benda",
+        "kata_kunci_1": "Benda",
+        "kata_kunci_2": "Artefak",
+        "nilai": 0,
+        "register_user": "252607015",
+        "register_date": "2025-10-13 10:33:46",
+        "update_user": "252607015",
+        "update_date": "2025-10-13 10:33:46",
+        "bobot_nilai": "3",
+        "jml_soal": 5
+    },
+    {
+        "bank_soal_id": "80",
+        "soal_id": "203",
+        "nis": "252607015",
+        "jawaban": "Tulisan",
+        "kata_kunci_1": "Tertulis",
+        "kata_kunci_2": "Tulisan",
+        "nilai": "3",
+        "register_user": "252607015",
+        "register_date": "2025-10-13 10:34:01",
+        "update_user": "252607015",
+        "update_date": "2025-10-13 10:34:01",
+        "bobot_nilai": "3",
+        "jml_soal": 5
+    }
+]

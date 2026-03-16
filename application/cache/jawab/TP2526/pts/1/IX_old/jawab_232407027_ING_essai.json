@@ -1,0 +1,32 @@
+[
+    {
+        "bank_soal_id": "37",
+        "soal_id": "224",
+        "nis": "232407027",
+        "jawaban": "Did she go for a school trip last mont? ",
+        "kata_kunci_1": "Did she go for a school trip last month?",
+        "kata_kunci_2": "did she go for a school trip last month?",
+        "nilai": 0,
+        "register_user": "232407027",
+        "register_date": "2025-10-13 09:14:50",
+        "update_user": "232407027",
+        "update_date": "2025-10-13 09:14:50",
+        "bobot_nilai": 0,
+        "jml_soal": 5
+    },
+    {
+        "bank_soal_id": "37",
+        "soal_id": "225",
+        "nis": "232407027",
+        "jawaban": "a stomach ache",
+        "kata_kunci_1": "a stomach ache.",
+        "kata_kunci_2": "sick",
+        "nilai": 0,
+        "register_user": "232407027",
+        "register_date": "2025-10-13 09:16:08",
+        "update_user": "232407027",
+        "update_date": "2025-10-13 09:16:08",
+        "bobot_nilai": 0,
+        "jml_soal": 5
+    }
+]

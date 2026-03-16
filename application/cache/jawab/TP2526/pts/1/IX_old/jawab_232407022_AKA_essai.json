@@ -1,0 +1,62 @@
+[
+    {
+        "bank_soal_id": "28",
+        "soal_id": "61",
+        "nis": "232407022",
+        "jawaban": "Kerja keras ",
+        "kata_kunci_1": "produktif",
+        "kata_kunci_2": "produktif",
+        "nilai": 0,
+        "register_user": "232407022",
+        "register_date": "2025-10-13 10:02:11",
+        "update_user": "232407022",
+        "update_date": "2025-10-13 10:02:11",
+        "bobot_nilai": "3",
+        "jml_soal": 5
+    },
+    {
+        "bank_soal_id": "28",
+        "soal_id": "58",
+        "nis": "232407022",
+        "jawaban": "Alam barzakh",
+        "kata_kunci_1": "padang mahsyar",
+        "kata_kunci_2": "mahsyar",
+        "nilai": 0,
+        "register_user": "232407022",
+        "register_date": "2025-10-13 10:04:20",
+        "update_user": "232407022",
+        "update_date": "2025-10-13 10:04:20",
+        "bobot_nilai": "3",
+        "jml_soal": 5
+    },
+    {
+        "bank_soal_id": "28",
+        "soal_id": "63",
+        "nis": "232407022",
+        "jawaban": "Surat al kahf",
+        "kata_kunci_1": "Al Zalzalah",
+        "kata_kunci_2": "Al-Zalzalah",
+        "nilai": 0,
+        "register_user": "232407022",
+        "register_date": "2025-10-13 10:05:01",
+        "update_user": "232407022",
+        "update_date": "2025-10-13 10:05:01",
+        "bobot_nilai": "3",
+        "jml_soal": 5
+    },
+    {
+        "bank_soal_id": "28",
+        "soal_id": "57",
+        "nis": "232407022",
+        "jawaban": "Dikumpulkan di padang mahsyar",
+        "kata_kunci_1": "Hari timbangan amal ",
+        "kata_kunci_2": "timbangan ",
+        "nilai": 0,
+        "register_user": "232407022",
+        "register_date": "2025-10-13 10:15:04",
+        "update_user": "232407022",
+        "update_date": "2025-10-13 10:15:04",
+        "bobot_nilai": "3",
+        "jml_soal": 5
+    }
+]

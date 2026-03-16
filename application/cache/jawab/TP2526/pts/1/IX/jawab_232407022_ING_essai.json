@@ -1,0 +1,62 @@
+[
+    {
+        "bank_soal_id": "37",
+        "soal_id": "224",
+        "nis": "232407022",
+        "jawaban": "You.is.then",
+        "kata_kunci_1": "Did she go for a school trip last month?",
+        "kata_kunci_2": "did she go for a school trip last month?",
+        "nilai": 0,
+        "register_user": "232407022",
+        "register_date": "2025-10-13 09:13:47",
+        "update_user": "232407022",
+        "update_date": "2025-10-13 09:13:47",
+        "bobot_nilai": "3",
+        "jml_soal": 5
+    },
+    {
+        "bank_soal_id": "37",
+        "soal_id": "225",
+        "nis": "232407022",
+        "jawaban": "What was then event",
+        "kata_kunci_1": "a stomach ache.",
+        "kata_kunci_2": "sick",
+        "nilai": 0,
+        "register_user": "232407022",
+        "register_date": "2025-10-13 09:16:41",
+        "update_user": "232407022",
+        "update_date": "2025-10-13 09:16:41",
+        "bobot_nilai": "3",
+        "jml_soal": 5
+    },
+    {
+        "bank_soal_id": "37",
+        "soal_id": "226",
+        "nis": "232407022",
+        "jawaban": "Who went there",
+        "kata_kunci_1": "A trip to Karimunjawa",
+        "kata_kunci_2": " Karimunjawa, a trip to karimun jawa",
+        "nilai": 0,
+        "register_user": "232407022",
+        "register_date": "2025-10-13 09:17:17",
+        "update_user": "232407022",
+        "update_date": "2025-10-13 09:17:17",
+        "bobot_nilai": "3",
+        "jml_soal": 5
+    },
+    {
+        "bank_soal_id": "37",
+        "soal_id": "227",
+        "nis": "232407022",
+        "jawaban": "Read then canption below  then photopik",
+        "kata_kunci_1": "Galang",
+        "kata_kunci_2": "galang",
+        "nilai": 0,
+        "register_user": "232407022",
+        "register_date": "2025-10-13 09:19:28",
+        "update_user": "232407022",
+        "update_date": "2025-10-13 09:19:28",
+        "bobot_nilai": "3",
+        "jml_soal": 5
+    }
+]

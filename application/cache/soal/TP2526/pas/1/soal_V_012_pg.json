@@ -1,0 +1,25 @@
+[
+    {
+        "id": "3528",
+        "thnajaran_cls": "TP2526",
+        "semester": "1",
+        "kelas_cls": "V",
+        "matapel_cls": "012",
+        "jenis_penilaian": "pas",
+        "tema_cls": null,
+        "no_kd": null,
+        "pertanyaan": "<p>test<\/p>",
+        "jawaban_a": "<p>a<\/p>",
+        "jawaban_b": "<p>b<\/p>",
+        "jawaban_c": "<p>c<\/p>",
+        "jawaban_d": "<p>d<\/p>",
+        "jawaban_e": null,
+        "kunci_jawaban": "a",
+        "img_path": null,
+        "bank_soal_id": "122",
+        "register_user": "guru",
+        "register_date": "2025-11-24 22:28:25",
+        "last_user": "guru",
+        "last_update": "2025-11-24 22:28:25"
+    }
+]

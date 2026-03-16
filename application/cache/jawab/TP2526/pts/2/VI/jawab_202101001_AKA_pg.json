@@ -1,0 +1,44 @@
+[
+    {
+        "bank_soal_id": "189",
+        "soal_id": "6092",
+        "nis": "202101001",
+        "jawaban": "b",
+        "kunci_jawaban": "c",
+        "nilai": 0,
+        "register_user": "202101001",
+        "register_date": "2026-01-25 21:25:59",
+        "update_user": "202101001",
+        "update_date": "2026-01-25 21:25:59",
+        "jml_soal": 3,
+        "bobot_nilai": "1"
+    },
+    {
+        "bank_soal_id": "189",
+        "soal_id": "6090",
+        "nis": "202101001",
+        "jawaban": "b",
+        "kunci_jawaban": "a",
+        "nilai": 0,
+        "register_user": "202101001",
+        "register_date": "2026-01-25 21:28:50",
+        "update_user": "202101001",
+        "update_date": "2026-01-25 21:28:50",
+        "jml_soal": 3,
+        "bobot_nilai": "1"
+    },
+    {
+        "bank_soal_id": "189",
+        "soal_id": "6091",
+        "nis": "202101001",
+        "jawaban": "c",
+        "kunci_jawaban": "b",
+        "nilai": 0,
+        "register_user": "202101001",
+        "register_date": "2026-01-25 21:28:59",
+        "update_user": "202101001",
+        "update_date": "2026-01-25 21:28:59",
+        "jml_soal": 3,
+        "bobot_nilai": "1"
+    }
+]

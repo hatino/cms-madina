@@ -1,0 +1,62 @@
+[
+    {
+        "bank_soal_id": "37",
+        "soal_id": "224",
+        "nis": "232407020",
+        "jawaban": "she",
+        "kata_kunci_1": "Did she go for a school trip last month?",
+        "kata_kunci_2": "did she go for a school trip last month?",
+        "nilai": 0,
+        "register_user": "232407020",
+        "register_date": "2025-10-13 09:11:20",
+        "update_user": "232407020",
+        "update_date": "2025-10-13 09:11:20",
+        "bobot_nilai": 0,
+        "jml_soal": 5
+    },
+    {
+        "bank_soal_id": "37",
+        "soal_id": "226",
+        "nis": "232407020",
+        "jawaban": "karimunjawa",
+        "kata_kunci_1": "A trip to Karimunjawa",
+        "kata_kunci_2": " Karimunjawa, a trip to karimun jawa",
+        "nilai": 0,
+        "register_user": "232407020",
+        "register_date": "2025-10-13 09:12:10",
+        "update_user": "232407020",
+        "update_date": "2025-10-13 09:12:10",
+        "bobot_nilai": 0,
+        "jml_soal": 5
+    },
+    {
+        "bank_soal_id": "37",
+        "soal_id": "227",
+        "nis": "232407020",
+        "jawaban": "galang",
+        "kata_kunci_1": "Galang",
+        "kata_kunci_2": "galang",
+        "nilai": 0,
+        "register_user": "232407020",
+        "register_date": "2025-10-13 09:12:34",
+        "update_user": "232407020",
+        "update_date": "2025-10-13 09:12:34",
+        "bobot_nilai": 0,
+        "jml_soal": 5
+    },
+    {
+        "bank_soal_id": "37",
+        "soal_id": "228",
+        "nis": "232407020",
+        "jawaban": "the island borneo",
+        "kata_kunci_1": "Borneo",
+        "kata_kunci_2": "borneo",
+        "nilai": 0,
+        "register_user": "232407020",
+        "register_date": "2025-10-13 09:13:25",
+        "update_user": "232407020",
+        "update_date": "2025-10-13 09:13:25",
+        "bobot_nilai": 0,
+        "jml_soal": 5
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "bank_soal_id": "32",
+        "soal_id": "141",
+        "nis": "212201002",
+        "jawaban": "b",
+        "kunci_jawaban": "b",
+        "nilai": "1",
+        "register_user": "212201002",
+        "register_date": "2025-10-13 00:04:13",
+        "update_user": "212201002",
+        "update_date": "2025-10-13 00:04:13",
+        "jml_soal": 30,
+        "bobot_nilai": "1"
+    },
+    {
+        "bank_soal_id": "32",
+        "soal_id": "154",
+        "nis": "212201002",
+        "jawaban": "b",
+        "kunci_jawaban": "b",
+        "nilai": "1",
+        "register_user": "212201002",
+        "register_date": "2025-10-13 00:04:27",
+        "update_user": "212201002",
+        "update_date": "2025-10-13 00:04:27",
+        "jml_soal": 30,
+        "bobot_nilai": "1"
+    },
+    {
+        "bank_soal_id": "32",
+        "soal_id": "170",
+        "nis": "212201002",
+        "jawaban": "a",
+        "kunci_jawaban": "a",
+        "nilai": "1",
+        "register_user": "212201002",
+        "register_date": "2025-10-13 00:05:36",
+        "update_user": "212201002",
+        "update_date": "2025-10-13 00:05:36",
+        "jml_soal": 30,
+        "bobot_nilai": "1"
+    },
+    {
+        "bank_soal_id": "32",
+        "soal_id": "174",
+        "nis": "212201002",
+        "jawaban": "d",
+        "kunci_jawaban": "d",
+        "nilai": "1",
+        "register_user": "212201002",
+        "register_date": "2025-10-13 00:06:00",
+        "update_user": "212201002",
+        "update_date": "2025-10-13 00:06:00",
+        "jml_soal": 30,
+        "bobot_nilai": "1"
+    },
+    {
+        "bank_soal_id": "32",
+        "soal_id": "176",
+        "nis": "212201002",
+        "jawaban": "a",
+        "kunci_jawaban": "a",
+        "nilai": "1",
+        "register_user": "212201002",
+        "register_date": "2025-10-13 00:06:18",
+        "update_user": "212201002",
+        "update_date": "2025-10-13 00:06:18",
+        "jml_soal": 30,
+        "bobot_nilai": "1"
+    }
+]
