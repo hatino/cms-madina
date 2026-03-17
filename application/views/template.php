@@ -238,7 +238,7 @@
   <?php
     $pesan = "Assalaamu ‘alaikum wr wb.
 
-    Admin saya mau tanya mengenai pendaftaran di SIT SWI
+    Admin saya mau tanya mengenai pendaftaran di SIT Madina
     1. Kapan mulai pendaftaran?
     2. Berapa uang pangkalnya?
 
