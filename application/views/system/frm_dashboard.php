@@ -123,8 +123,7 @@
         </div>     
       </div>
       
-      <div class='row'></div>
-      <div style="line-height: 5px;"><br></div>
+      <div class='row'></div>     
       <div id="row_lowongan">
         <div class='row'>   
           <div id="lowongan"></div>     
@@ -149,14 +148,28 @@
 </body>
 
 <br>
-<div class="d-flex flex-column justify-content-center align-items-center bg-dark font_contact" style="padding: 30pt; border-radius: 5px;">
-    <!--span style="font-family: 'Arial Narrow'; font-size: 17pt; margin-bottom: 5px;" --> 
-      <p>
-          <span class="fw-bold" style="font-family: 'Arial Narrow'; font-size: 20pt; color:white"><strong> Hubungi Kami</strong></span> <br>
-          <span style="color: white;">Untuk mendapatkan informasi yang lebih cepat, silakan menghubungi nomor admin <a id="div_no_hotline"></a><br>
-          JAM OPERASIONAL SEKOLAH<br>
-          Senin-Jumat : Pukul 08.00 – 14.00 WIB</span>
-      </p>
+<div class="d-flex flex-column justify-align-center  bg-dark font_contact" style="padding: 30pt; border-radius: 5px;">
+  <div class="row">
+    <div class="col-12 col-md-4 pe-3 pb-3">
+        <span class="fw-bold" style="font-family: 'Arial Narrow'; font-size: 15pt; color:white"><strong> HUBUNGI KAMI</strong></span> <br>
+        <span style="color: white;">Admin : <a id="div_no_hotline"></a><br>
+        <span style="color: white;">Email : <a style="color: white" href="https://mail.google.com/mail/?view=cm&fs=1&to=yayasanswi@gmail.com" target="_blank">yayasanswi@gmail.com</a><br>
+    </div>
+    <div class="col-12 col-md-4"></div>
+    <div class="col-12 col-md-4">
+        <span class="fw-bold" style="font-family: 'Arial Narrow'; font-size: 15pt; color:white"><strong> JAM OPERASIONAL SEKOLAH</strong></span> <br>                            
+        <span style="color: white;">Senin-Jumat : Pukul 08.00 - 14.00 WIB</span> <br> 
+        <span style="color: white;">Sabtu : Pukul 08.00 - 12.00 WIB</span>         
+    </div>
+  </div>
+
+  <!-- <p>
+      <span class="fw-bold" style="font-family: 'Arial Narrow'; font-size: 20pt; color:white"><strong> Hubungi Kami</strong></span> <br>
+      <span style="color: white;">Untuk mendapatkan informasi yang lebih cepat, silakan menghubungi nomor admin <a id="div_no_hotline"></a><br>
+      JAM OPERASIONAL SEKOLAH<br>
+      Senin-Jumat : Pukul 08.00 – 14.00 WIB</span>
+  </p> -->
+
 </div>  
 <br>
 
@@ -707,7 +720,7 @@
               if(data.length > 0){
                 // html +='<hr>';
                 html +='<div class="container-fluid">';
-                html +='<div style="line-height:15px;"><br></div>';   
+                //html +='<div style="line-height:15px;"><br></div>';   
                 html +='<div class="row">';
                 html +='  <div class="col-6">';
                 html +='    <h3 class="text-header" align="left"><strong><u>Lowongan</u></strong></h3>';
@@ -717,7 +730,7 @@
                 html +='  </div>';
                 html +='</div>';        
 
-                html +='<div class="row" align="center" >';
+                html +='<div class="row justify-content-center">';
                 for (let i = 0; i < data.length; i++) {        
                     var the_date = new Date(data[i].register_date)                      
                     var tgl =  ('00' + the_date.getDate()).slice(-2) + " "                       
@@ -874,21 +887,22 @@
                 for (let i = 0; i < data.length; i++) {                          
                     html +=' <div class="col" style="margin-bottom:5px;" align="center">'; 
                     html +='    <h6 class="text-header">'+data[i].deskripsi+'</h6>';
-                    html +='    <div class="card shadow btn_lihat_sejarah_unit_sekolah" data-id='+data[i].group_cls+' style="border-radius: 10px;">';                   
+                    html +='    <div class="card shadow btn_lihat_sejarah_unit_sekolah h-100" data-id='+data[i].group_cls+' style="border-radius: 10px;">';                   
                     html +='        <div class="img-wrapper p-2">';
                     html +='        <img src='+data[i].photo_sejarah_sekolah_path+'?'+ new Date().getTime()+' class="my_img mx-auto d-block p-1" style="cursor: pointer; border-top-right-radius: 10px; border-top-left-radius: 10px;" >'; 
                     html +='        </div>';
-                    html +='        <div class="card-body">';                    
+                    html +='        <div class="card-body pb-0">';                    
                     var sejarah_sekolah = data[i].sejarah_sekolah.trim()
                     var len_sejarah_sekolah = sejarah_sekolah.length;
                     var isi_sejarah_sekolah;
-                    if(len_sejarah_sekolah > 200){
-                      isi_sejarah_sekolah = sejarah_sekolah.substr(0,200)+"..."
+                    if(len_sejarah_sekolah > 300){
+                      //isi_sejarah_sekolah = sejarah_sekolah.substr(0,200)+"..."
+                      isi_sejarah_sekolah = truncateHTML(sejarah_sekolah, 300);
                     }else{
                       isi_sejarah_sekolah = sejarah_sekolah
                     }                            
-                    html +='            <p class="text-header" style="margin-bottom:3px; text-align:left;">'+isi_sejarah_sekolah+'</p>';                                                                                       
-                    html +='            <div class="card-text-detail" style="margin-bottom:3px; display:none;">'+sejarah_sekolah+'<br><br></div>';
+                    html +='            <p class="text-header mb-0" style="text-align:left;">'+isi_sejarah_sekolah+'</p>';                                                                                       
+                    html +='            <div class="card-text-detail" style="margin-bottom:1px; display:none;">'+sejarah_sekolah+'<br><br></div>';
                     // html +='            <div style="margin-bottom:3px; text-align:left; font-size:12px"><i style="color:grey;">'+tgl+'</i></div>';   
                     html +='        </div>';                    
                     html +='    </div>';                     
@@ -915,7 +929,7 @@
               var html = '';   
               if(dataResult.data[0].length > 0){      
                   // html +='<hr>';                 
-                  html +='<div class="container-fluid" style="background-color: rgba(226, 223, 223, 0.3);">';
+                  html +='<div class="container-fluid pb-5" style="background-color: rgba(226, 223, 223, 0.3);">';
                   html +='<div style="line-height:15px;"><br></div>';   
                   html +='<div class="row" >';
                   html +='  <div class="col-6">';
@@ -926,29 +940,31 @@
                   html +='  </div>';
                   html +='</div>';       
 
-                  html +='<div class="row" >'; 
+                  html +='<div class="row justify-content-center" >'; 
                   for (let i = 0; i < dataResult.data[0].length; i++) {    
                      if(dataResult.data[0][i].kode_sosmed == 'fb'){                      
-                        html +='  <div class="col-6 col-sm-2 btn_lihat_fb" align="center" border>';       
-                        html +='      <img src="../images/images_ui/icon_facebook.png" class="img-width" style="cursor: pointer;" >';            
+                        html +='  <div class="col-6 col-sm-2 btn_lihat_fb d-flex flex-column align-items-center"  border>';       
+                        html +='      <img src="../images/images_ui/icon_facebook.png" class="img-width mx-auto d-block" style="cursor: pointer;" >';            
                      }else if(dataResult.data[0][i].kode_sosmed == 'yt'){
-                        html +='  <div class="col-6 col-sm-2 btn_lihat_yt" align="center" border>';       
-                        html +='      <img src="../images/images_ui/icon_youtube.png" class="img-width" style="cursor: pointer;" >';            
+                        html +='  <div class="col-6 col-sm-2 btn_lihat_yt d-flex flex-column align-items-center" border>';       
+                        html +='      <img src="../images/images_ui/icon_youtube.png" class="img-width mx-auto d-block" style="cursor: pointer;" >';            
                      }else if(dataResult.data[0][i].kode_sosmed == 'ig') {
-                        html +='  <div class="col-6 col-sm-2 btn_lihat_ig" align="center" border>';       
-                        html +='      <img src="../images/images_ui/icon_instagram.png" class="img-width" style="cursor: pointer;" >';            
+                        html +='  <div class="col-6 col-sm-2 btn_lihat_ig d-flex flex-column align-items-center" border>';       
+                        html +='      <img src="../images/images_ui/icon_instagram.png" class="img-width mx-auto d-block" style="cursor: pointer;" >';            
                      }else if (dataResult.data[0][i].kode_sosmed == 'tt'){
-                        html +='  <div class="col-6 col-sm-2 btn_lihat_tt" align="center" border>';       
-                        html +='      <img src="../images/images_ui/icon_tiktok.png" class="img-width" style="cursor: pointer;" >';            
+                        html +='  <div class="col-6 col-sm-2 btn_lihat_tt d-flex flex-column align-items-center" border>';       
+                        html +='      <img src="../images/images_ui/icon_tiktok.png" class="img-width mx-auto d-block" style="cursor: pointer;" >';            
                      }
                         html +='      <div class="deskrips text-header" style="text-align:center;"><b>'+dataResult.data[0][i].deskripsi+'</b></div>'; 
                         html +='      <div style="display:none;" class="link_sosmed">'+dataResult.data[0][i].link_video+'</div>';                       
                         html +='  </div>';
                   }                           
                   html += '</div>';   
-                  html +=' <div style="line-height:50px;"><br></div>';
+                  html += '</div>';
+                  html +=' <div style="line-height:40px;"><br></div>';
                   document.getElementById('row_link_sosmed').style.backgroundColor = "white";
                   document.getElementById('row_link_sosmed').style.borderRadius = "25px";    
+                  
                   $("#div_link_sosmed").html(html); 
               }
             }

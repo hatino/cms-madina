@@ -33,7 +33,7 @@
     }
 
     async function fetch_data_berita(page) {        
-        var limit = 3
+        var limit = 9
         await fetch('<?php echo site_url('berita/berita/get_data_berita') ;?>?&page='+page+'&limit='+limit+'')
         .then(function(response){
             return response.json();    
@@ -102,7 +102,8 @@
                     var len_berita = berita.length;
                     var isi_berita;
                     if(len_berita > 200){
-                        isi_berita = berita.substr(0,200)+"..."
+                        //isi_berita = berita.substr(0,200)+"..."
+                        isi_berita = truncateHTML(berita, 200);
                     }else{
                         isi_berita = berita
                     }                    
@@ -132,6 +133,45 @@
                 document.getElementById("div_pagination").innerHTML = html    
             } 
          });   
+    }
+
+    function truncateHTML(html, limit) {
+        let div = document.createElement("div");
+        div.innerHTML = html;
+
+        let count = 0;
+
+        function walk(node) {
+            if (node.nodeType === 3) { 
+                let text = node.nodeValue;
+
+                if (count + text.length > limit) {
+                    node.nodeValue = text.substring(0, limit - count) + "...";
+                    return true;
+                }
+
+                count += text.length;
+            }
+
+            if (node.nodeType === 1) {
+                let children = [...node.childNodes];
+
+                for (let child of children) {
+                    if (walk(child)) {
+                        for (let sib of children.slice(children.indexOf(child)+1)) {
+                            sib.remove();
+                        }
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        walk(div);
+
+        return div.innerHTML;
     }
 
     function changeMainImg(e, id, src) {      
