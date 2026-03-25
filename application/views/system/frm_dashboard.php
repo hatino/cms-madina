@@ -306,15 +306,17 @@
       //$('#uploaded_img_carousel2').append("<img src='"+ path_carousel_2 +'?'+ new Date().getTime()+ "' class='img-width'>");
       //$('#uploaded_img_carousel3').append("<img src='"+ path_carousel_3 +'?'+ new Date().getTime()+ "' class='img-width'>");
       $('#img_carousel1').append(`
-        <video id="videoSlide1" class="d-block w-100" autoplay muted playsinline style="height: 100vh; object-fit: cover;">
+        <video id="videoSlide1" class="d-block w-100" autoplay muted playsinline style="height: 105vh; object-fit: cover;">
           <source src="${path_carousel_1}?${new Date().getTime()}" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       `);
      
       //$('#img_carousel1').append("<img src='"+path_carousel_1+'?'+ new Date().getTime()+"' alt='Slide 1' class='Myimage d-block' style='width:100%'>");
-      $('#img_carousel2').append("<img src='"+path_carousel_2+'?'+ new Date().getTime()+"' alt='Slide 2' class='Myimage d-block' style='width:100%'>");
-      $('#img_carousel3').append("<img src='"+path_carousel_3+'?'+ new Date().getTime()+"' alt='Slide 2' class='Myimage d-block' style='width:100%'>");
+      //$('#img_carousel2').append("<img src='"+path_carousel_2+'?'+ new Date().getTime()+"' alt='Slide 2' class='Myimage d-block' style='width:100%'>");
+      $('#img_carousel2').append("<img src='"+path_carousel_2+'?'+ new Date().getTime()+"' alt='Slide 2' class='Myimage d-block w-100' style='height: 105vh; object-fit: cover;'>");
+      //$('#img_carousel3').append("<img src='"+path_carousel_3+'?'+ new Date().getTime()+"' alt='Slide 3' class='Myimage d-block' style='width:100%'>");
+      $('#img_carousel3').append("<img src='"+path_carousel_3+'?'+ new Date().getTime()+"' alt='Slide 3' class='Myimage d-block w-100' style='height: 105vh; object-fit: cover;'>");
   }
 
   async function get_image_ext(file_name) {        
