@@ -215,8 +215,15 @@
 
         const result = await response.json();
         
-        await fetch_tbl_berita(page)
-        await input_area_clear()       
+        if(result.status==true){
+            alert(result.message)
+            await fetch_tbl_berita(page)
+            await input_area_clear()     
+        }else{
+             alert(result.message)
+        }
+        
+          
     });
     
     // async function delete_file_berita(file_berita_path) {

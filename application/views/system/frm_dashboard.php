@@ -199,6 +199,7 @@
   $('.Myimage').attr('src', (i, src) =>
   src + '?' + (new Date().getTime()));
 
+  
   document.addEventListener('DOMContentLoaded', async function() {
     await init_form()
 
@@ -272,6 +273,7 @@
       await fetch_link_sosmed()
       await fetch_alamat()
       await fetch_visitors()
+      
       // await fetch_fasilitas()
       <?php simpan_kunjungan(); ?>
 
@@ -363,24 +365,26 @@
             var html = '';
             var html2 = ''; 
             if (data.data.length>0){                
-                if(data.data[0].running_text_1 != ''){
-                  // html +='<marquee class="run_text_1" style="color:#581874ff; text-shadow: 1px 1px rgb(160, 163, 163)"><b><i>'+data.data[0].running_text_1+'</i></b></marquee>';
-                  // $('#running_text_1').html(html)
-
-                  html += '<div class="marquee run_text_1"><span style="color:#581874ff; text-shadow: 1px 1px rgb(160, 163, 163)"><b><i>' 
-                       + data.data[0].running_text_1 + 
-                         '</i></b></span></div>';
-                  $('#running_text_1').html(html)
+                if(data.data[0].running_text_1 != ''){                 
+                  const isiTeks = data.data[0].running_text_1;                  
+                  html = `
+                    <div class="marquee-modern">
+                        ${isiTeks}
+                    </div>
+                  `;
+                  $('#running_text_1').html(html);
+                  
                 }
                 
-                if(data.data[0].running_text_2 != ''){
-                  // html2 +='<marquee class="run_text_2 text-header" style="text-shadow: 1px 1px rgb(160, 163, 163)"><b><i>'+data.data[0].running_text_2+'</i></b></marquee>';
-                  // $('#running_text_2').html(html2)
-
-                  html2 +='<div class="marquee run_text_2 text-header"><span style="text-shadow: 1px 1px rgb(160, 163, 163)"><b><i>'
-                        + data.data[0].running_text_2 + 
-                              '</i></b></span></div>';
+                if(data.data[0].running_text_2 != ''){                
+                  const isiTeks2 = data.data[0].running_text_2;                  
+                  html2 = `
+                    <div class="marquee-modern text-header">
+                        ${isiTeks2}
+                    </div>
+                  `;
                   $('#running_text_2').html(html2)
+
                 }
             }
 
@@ -1369,49 +1373,6 @@
         background-color: transparent;
     }
 
-    /***** START RUNNING TEXT *****/
-    .run_text_1{
-        /* top: 580px; */
-        /*position: absolute;        */
-        font-size: xx-large;
-        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-    }
-
-    .run_text_2{
-        /* top: 550px;
-        position: absolute;        */
-        font-size: xx-large;
-        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-    }
-
-    .marquee-container {
-      /* overflow: hidden;
-      width: 100%; */
-      /* background: #222;
-      color: #fff;
-      padding: 10px 0; */
-    }
-
-    .marquee {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .line {
-      white-space: nowrap;
-      display: inline-block;
-      animation: marquee 30s linear infinite;
-    }
-
-    @keyframes marquee {
-      from { transform: translateX(100%); }
-      to   { transform: translateX(-100%); }
-    }
-
-    /***** END RUNNING TEXT *****/
-
-
     .container_pen {
       display: flex;
       align-items: center;
@@ -1611,25 +1572,62 @@
         transform: scale(1.05);
     }
     
-    .marquee {
-      overflow: hidden;
-      white-space: nowrap;
+    /********* [START] CSS FOR RUNNING TEXT ******/
+    #running_text_1 {
+        width: 100%;
+        overflow: hidden; /* Sembunyikan teks yang keluar jalur */
+        background: transparent;
+        white-space: nowrap;
+        box-sizing: border-box;
+        padding: 10px 0;
+        margin-bottom: 0; /* Menghapus jarak bawah */
+        padding-bottom: 0;
+       
+        color: #581874; 
+        font-size: xx-large;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    
+    #running_text_2 {
+        width: 100%;
+        overflow: hidden; /* Sembunyikan teks yang keluar jalur */
+        background: transparent;
+        white-space: nowrap;
+        box-sizing: border-box;
+        padding: 10px 0;
+        font-size: xx-large;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+    
+    /* Animasi Teks */
+    .marquee-modern {
+        display: inline-block;
+        padding-left: 100%; /* Mulai dari paling kanan */
+        animation: jalan-terus 15s linear infinite; /* 15 detik, sesuaikan kecepatannya */
+        
+        /* Style dari kode Anda */       
+        text-shadow: 1px 1px rgb(160, 163, 163);
+        font-weight: bold;
+        font-style: italic;
+        /* font-size: 1.2rem; */
     }
 
-    .marquee span {
-      display: inline-block;
-      padding-left: 100%;
-      animation: jalan 25s linear infinite;
+    /* Jalur gerakannya */
+    @keyframes jalan-terus {
+        0%   { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
     }
 
-    @keyframes jalan {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-150%);
-      }
+    /* Opsional: Berhenti saat mouse diarahkan ke teks */
+    #running_text_1:hover .marquee-modern {
+        animation-play-state: paused;
     }
+
+    #running_text_2:hover .marquee-modern {
+        animation-play-state: paused;
+    }
+
+    /********* [END] CSS FOR RUNNING TEXT ******/
 
 </style>
 
