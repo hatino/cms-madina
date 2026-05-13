@@ -200,9 +200,8 @@
   src + '?' + (new Date().getTime()));
 
   
-  document.addEventListener('DOMContentLoaded', async function() {    
+  document.addEventListener('DOMContentLoaded', async function() {
     await init_form()
-    await updateMarqueeSpeed() // for running text
 
     const myCarouselElement = document.querySelector('#demo');
     const carouselInstance = new bootstrap.Carousel(myCarouselElement, {
@@ -242,8 +241,6 @@
         // e.relatedTarget adalah elemen slide yang baru saja aktif
         playNextStep(e.relatedTarget);
     });
-
-    
   });
 
   async function init_form() {    
@@ -371,8 +368,8 @@
                 if(data.data[0].running_text_1 != ''){                 
                   const isiTeks = data.data[0].running_text_1;                  
                   html = `
-                    <div class="container-marquee">
-                        <span class="marquee-text">${isiTeks}</span>
+                    <div class="marquee-modern">
+                        ${isiTeks}
                     </div>
                   `;
                   $('#running_text_1').html(html);
@@ -382,8 +379,8 @@
                 if(data.data[0].running_text_2 != ''){                
                   const isiTeks2 = data.data[0].running_text_2;                  
                   html2 = `
-                    <div class="container-marquee text-header">
-                        <span class="marquee-text">${isiTeks2}</span>
+                    <div class="marquee-modern-2 text-header">
+                        ${isiTeks2}
                     </div>
                   `;
                   $('#running_text_2').html(html2)
@@ -1283,27 +1280,6 @@
       document.documentElement.scrollTop = 0;
   }
 
-async function updateMarqueeSpeed() {
-    const pixelsPerSecond = 60; // Ubah ini untuk mengatur kecepatan (misal 100px per detik)
-    const marquees = document.querySelectorAll('.marquee-text');
-    
-    await marquees.forEach(marquee => {
-        const textWidth = marquee.getBoundingClientRect().width;
-        
-        // Jarak total = Lebar teks itu sendiri
-        // Karena padding-left: 100vw sudah termasuk dalam lebar elemen saat menggunakan max-content
-        const duration = textWidth / pixelsPerSecond;
-
-        marquee.style.setProperty('--durasi', `${duration}s`);        
-    });
-}
-
-
-// Jalankan saat semua aset selesai dimuat
-window.addEventListener('load', updateMarqueeSpeed);
-
-// Opsional: Jalankan ulang jika layar di-resize agar tetap akurat
-window.addEventListener('resize', updateMarqueeSpeed);
 
 </script>
 
@@ -1624,35 +1600,48 @@ window.addEventListener('resize', updateMarqueeSpeed);
         font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     }
     
-    .container-marquee {
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-        /*border: 1px solid #ccc;*/ /* hanya untuk melihat batas */
-    }
-
-    .marquee-text {
+    /* Animasi Teks */
+    .marquee-modern {
         display: inline-block;
-        width: max-content; /* Sangat Penting! */
-        padding-left: 100vw; /* Mulai dari luar layar kanan */
-        animation: jalan-terus var(--durasi, 10s) linear infinite;
+        padding-left: 100%; /* Mulai dari paling kanan */
+        animation: jalan-terus 30s linear infinite; /* 15 detik, sesuaikan kecepatannya */
         
-        font-size: xx-large;
+        /* Style dari kode Anda */       
+        text-shadow: 1px 1px rgb(160, 163, 163);
         font-weight: bold;
         font-style: italic;
+        /* font-size: 1.2rem; */
     }
 
+    .marquee-modern-2 {
+        display: inline-block;
+        padding-left: 100%; /* Mulai dari paling kanan */
+        animation: jalan-terus-2 30s linear infinite; /* 15 detik, sesuaikan kecepatannya */
+        
+        /* Style dari kode Anda */       
+        text-shadow: 1px 1px rgb(160, 163, 163);
+        font-weight: bold;
+        font-style: italic;
+        /* font-size: 1.2rem; */
+    }
+
+    /* Jalur gerakannya */
     @keyframes jalan-terus {
-        0%   { transform: translateX(0); }
-        100% { transform: translateX(-100%); }
+        0%   { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
+    }
+
+    @keyframes jalan-terus-2 {
+        0%   { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
     }
 
     /* Opsional: Berhenti saat mouse diarahkan ke teks */
-    #running_text_1:hover .marquee-text {
+    #running_text_1:hover .marquee-modern {
         animation-play-state: paused;
     }
 
-    #running_text_2:hover .marquee-text {
+    #running_text_2:hover .marquee-modern-2 {
         animation-play-state: paused;
     }
     
