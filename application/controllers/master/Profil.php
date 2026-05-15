@@ -71,7 +71,77 @@ class Profil extends ci_controller{
         }        
     }
 
-   
+    function get_data_profil_unit_sekolah_all() {
+        $query=$this->mdl_profil->get_data_profil_unit_sekolah_all();
+        $dataRaw = $query->result_array();
+    
+        $totalRaw = count($dataRaw);
+
+        // Jika data lebih dari 1, lakukan pembersihan (filter spasi/kosong)
+        if ($totalRaw > 1) {
+            $data = array_values(array_filter($dataRaw, function($row) {
+                return isset($row['telp']) && trim((string)$row['telp']) !== '';
+            }));
+        } else {
+            // Jika hanya 1 (atau 0), gunakan data apa adanya
+            $data = $dataRaw;
+        }
+       
+        $totalData = count($data);
+        $semuaNoHP = array_column($data, 'telp');
+        $jumlahNoHPUnik = count(array_unique($semuaNoHP));
+
+        //echo $jumlahNoHPUnik;
+       
+        $grouped = [];
+
+        foreach ($data as $row) {
+            $hp = $row['telp'];
+            $jenjang = $row['group_cls'];
+            
+            // Kelompokkan jenjang berdasarkan noHP yang sama
+            $grouped[$hp][] = $jenjang;
+        }
+
+        $pesanWA = "Assalaamu ‘alaikum wr wb.
+
+                Admin saya mau tanya mengenai pendaftaran di SIT Madina
+                1. Kapan mulai pendaftaran?
+                2. Berapa uang pangkalnya?
+
+                Terima kasih 🙏🏻";
+
+        $labelJenjang='';
+        $footerLinks = [];
+        foreach ($grouped as $hp => $jenjangs) {
+            // 1. Bersihkan nomor HP: hilangkan spasi/strip dan ubah 0 di depan jadi 62
+            // Hasil: 0811-1900 -> 628111900
+            $cleanHP = preg_replace('/[^0-9]/', '', $hp);
+            if (substr($cleanHP, 0, 1) === '0') {
+                $cleanHP = '62' . substr($cleanHP, 1);
+            }
+
+            // Jika jumlah nomor unik hanya 1, maka tidak perlu pakai (TK/SD/SMP)
+            if ($jumlahNoHPUnik > 1) {          
+                $labelJenjang = "(".implode('/', $jenjangs).")";              
+            }           
+
+            // 3. Buat tag <a> untuk setiap nomor
+            $link = "<a href='https://wa.me/{$cleanHP}?text={$pesanWA}' 
+                        target='_blank' 
+                        title='Silahkan Chat kepada kami untuk informasi lengkap'                        
+                        >
+                        <span class='footer-wa-link'>{$hp}</span></a>"."  {$labelJenjang}";
+            
+            $footerLinks[] = $link;
+        }
+
+        // Gabungkan semua link dengan ampersand
+        $hasilTampilan = implode(' & ', $footerLinks);
+        echo json_encode($hasilTampilan);
+        //var_dump($hasilAkhir);
+    }
+
     function  get_data_profil_unit_sekolah(){        
         try {                   
             $list_jenjang = $this->input->get('list_jenjang');

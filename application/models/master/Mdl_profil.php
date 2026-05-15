@@ -18,6 +18,23 @@ class Mdl_profil extends ci_model
         return $this->db->query($query);
     }
 
+    function get_data_profil_unit_sekolah_all() {
+        $query ="SELECT nama
+                    ,   alamat
+                    ,   telp
+                    ,   no_hotline
+                    ,   nama_petugas
+                    ,   visi
+                    ,   misi
+                    ,   photo_visi_path
+                    ,   google_map
+                    ,   group_cls
+                    ,   case when nama_petugas = '' then '' else concat('(',nama_petugas,')') end as nama_petugas
+                FROM   profil_unit_sekolah
+                ORDER BY seq_no";
+        return $this->db->query($query); 
+    }
+    
     function get_data_profil_unit_sekolah($list_jenjang) {   
         $query ="SELECT nama
                     ,   alamat

@@ -150,12 +150,12 @@
 <br>
 <div class="d-flex flex-column justify-align-center  bg-dark font_contact" style="padding: 30pt; border-radius: 5px;">
   <div class="row">
-    <div class="col-12 col-md-4 pe-3 pb-3">
+    <div class="col-12 col-md-6 pe-3 pb-3">
         <span class="fw-bold" style="font-family: 'Arial Narrow'; font-size: 15pt; color:white"><strong> HUBUNGI KAMI</strong></span> <br>
-        <span style="color: white;">Admin : <a id="div_no_hotline"></a><br>
-        <span style="color: white;">Email : <a style="color: white" href="https://mail.google.com/mail/?view=cm&fs=1&to=yayasanswi@gmail.com" target="_blank">yayasanswi@gmail.com</a><br>
+        <span style="color: white;">Admin Madina : <a id="div_no_hotline"></a><br>
+        <span style="color: white;">Email : <a style="color: white; text-decoration:none" href="https://mail.google.com/mail/?view=cm&fs=1&to=yayasanswi@gmail.com" target="_blank">yayasanswi@gmail.com</a><br>
     </div>
-    <div class="col-12 col-md-4"></div>
+    <div class="col-12 col-md-2"></div>
     <div class="col-12 col-md-4">
         <span class="fw-bold" style="font-family: 'Arial Narrow'; font-size: 15pt; color:white"><strong> JAM OPERASIONAL SEKOLAH</strong></span> <br>                            
         <span style="color: white;">Senin-Jumat : Pukul 08.00 - 14.00 WIB</span> <br> 
@@ -251,15 +251,17 @@
       var path_visi = "<?php echo base_url() ?>" +'./images/images_ui/up-arrows.png';	
       $('#myBtn').append("<img src='"+ path_visi + "' width='30' height='30'>");	
 
-      var get_data = await fetch('<?php echo site_url('master/profil/get_data_profil_yayasan') ;?>', {method:"GET", mode: "no-cors" })
+      //var get_data = await fetch('<?php echo site_url('master/profil/get_data_profil_yayasan') ;?>', {method:"GET", mode: "no-cors" })
+      var get_data = await fetch('<?php echo site_url('master/profil/get_data_profil_unit_sekolah_all') ;?>', {method:"GET", mode: "no-cors" })
       const result = await get_data.json()  
       
-      if (result.data[0].length > 0){
-          var no_hotline =  result.data[0][0].no_hotline        
-          document.getElementById("div_no_hotline").innerHTML = no_hotline;
-      }else{
+    //   if (result.data[0].length > 0){
+    //       var no_hotline =  result.data[0][0].no_hotline        
+        var no_hotline = result;
+        document.getElementById("div_no_hotline").innerHTML = no_hotline;
+    //   }else{
 
-      }
+    //   }
 
       await load_carousel_image()
       await fetch_carousel_text()
@@ -1658,6 +1660,18 @@ window.addEventListener('resize', updateMarqueeSpeed);
     
 
     /********* [END] CSS FOR RUNNING TEXT ******/
+
+     .footer-wa-link {
+        text-decoration: underline;       
+        font-weight: bold;
+        /* color: inherit; */
+        color: #e5e7e7;
+    }
+    .footer-wa-link:hover {
+        text-decoration: underline;
+        color: #25D366; /* Warna khas WhatsApp saat di-hover */
+    }
+
 
 </style>
 
