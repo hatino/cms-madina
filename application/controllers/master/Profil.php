@@ -103,13 +103,12 @@ class Profil extends ci_controller{
             $grouped[$hp][] = $jenjang;
         }
 
-        $pesanWA = "Assalaamu ‘alaikum wr wb.
+        $pesanWA = "Assalamu alaikum wrwb.
 
-                Admin saya mau tanya mengenai pendaftaran di SIT Madina
-                1. Kapan mulai pendaftaran?
-                2. Berapa uang pangkalnya?
+Saya mau menanyakan mengenai pendaftaran siswa baru🙏🏻";
 
-                Terima kasih 🙏🏻";
+        // Mengencode seluruh teks agar aman untuk URL (mengubah enter menjadi %0A)
+        $pesanEncode = rawurlencode($pesanWA);
 
         $labelJenjang='';
         $footerLinks = [];
@@ -127,7 +126,7 @@ class Profil extends ci_controller{
             }           
 
             // 3. Buat tag <a> untuk setiap nomor
-            $link = "<a href='https://wa.me/{$cleanHP}?text={$pesanWA}' 
+            $link = "<a href='https://wa.me/{$cleanHP}?text={$pesanEncode}' 
                         target='_blank' 
                         title='Silahkan Chat kepada kami untuk informasi lengkap'                        
                         >
