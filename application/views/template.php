@@ -236,13 +236,9 @@
   ?>
 
   <?php
-    $pesan = "Assalaamu ‘alaikum wr wb.
+    $pesan = "Assalamu alaikum wrwb.
 
-    Admin saya mau tanya mengenai pendaftaran di SIT Madina
-    1. Kapan mulai pendaftaran?
-    2. Berapa uang pangkalnya?
-
-    Terima kasih 🙏🏻";
+Saya mau menanyakan mengenai pendaftaran siswa baru🙏🏻";
   ?>
 
   <!-- <a href="https://wa.me/6281519040960" target="_blank"  title="Silahkan Chat kepada kami untuk informasi lengkap" style="margin: 0 0 20px 0 !important;  -->
